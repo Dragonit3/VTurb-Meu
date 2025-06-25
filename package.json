@@ -15,7 +15,8 @@
     "start": "cd api && npm start",
     "prod": "npm run build && npm run start:prod",
     "start:prod": "NODE_ENV=production cd api && npm start",
-    "install:all": "npm install && cd api && npm install && cd ../player && npm install && cd ../dashboard && npm install && cd ../shared && npm install"
+    "install:all": "npm install && cd api && npm install && cd ../player && npm install && cd ../dashboard && npm install && cd ../shared && npm install",
+    "postinstall": "npm run install:all"
   },
   "keywords": ["video-player", "analytics", "embed", "vturb"],
   "author": "VTurb Team",

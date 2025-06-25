@@ -1,0 +1,21 @@
+[phases.setup]
+nixPkgs = ["nodejs_18", "npm-9_x"]
+
+[phases.install]
+cmds = [
+  "npm install",
+  "cd api && npm install",
+  "cd ../player && npm install", 
+  "cd ../dashboard && npm install",
+  "cd ../shared && npm install"
+]
+
+[phases.build]
+cmds = [
+  "npm run build:api",
+  "npm run build:player", 
+  "npm run build:dashboard"
+]
+
+[start]
+cmd = "npm run start"
