@@ -1,0 +1,26 @@
+{
+  "name": "vturb-player-mvp",
+  "version": "1.0.0",
+  "description": "MVP do VTurb Player Inteligente - Player de vídeo embutível com analytics",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:player\" \"npm run dev:dashboard\"",
+    "dev:api": "cd api && npm run dev",
+    "dev:player": "cd player && npm run dev",
+    "dev:dashboard": "cd dashboard && npm run dev",
+    "build": "npm run build:api && npm run build:player && npm run build:dashboard",
+    "build:api": "cd api && npm run build",
+    "build:player": "cd player && npm run build",
+    "build:dashboard": "cd dashboard && npm run build",
+    "start": "cd api && npm start",
+    "prod": "npm run build && npm run start:prod",
+    "start:prod": "NODE_ENV=production cd api && npm start",
+    "install:all": "npm install && cd api && npm install && cd ../player && npm install && cd ../dashboard && npm install && cd ../shared && npm install"
+  },
+  "keywords": ["video-player", "analytics", "embed", "vturb"],
+  "author": "VTurb Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 

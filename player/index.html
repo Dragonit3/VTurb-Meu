@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTurb Player - Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .player-demo {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 VTurb Player - Biblioteca</h1>
+        
+        <div class="info">
+            <h3>Como usar a biblioteca:</h3>
+            <ol>
+                <li>Inclua o script do player em sua página</li>
+                <li>Inicialize o player com o ID do vídeo</li>
+                <li>O player será renderizado automaticamente</li>
+            </ol>
+        </div>
+        
+        <div class="player-demo">
+            <!-- Demo do player será inserido aqui -->
+        </div>
+        
+        <div class="info">
+            <h3>Exemplo de Código:</h3>
+            <div class="code-block">
+// 1. Incluir o script
+&lt;script src="http://localhost:3001/embed/abc123.js"&gt;&lt;/script&gt;
+
+// 2. Ou inicializar manualmente
+const player = window.VTurbPlayer.init('abc123', {
+    apiUrl: 'http://localhost:3001',
+    primaryColor: '#3B82F6',
+    autoplay: false,
+    muted: true
+});
+
+// 3. Rastrear eventos
+player.track('custom_event', { data: 'value' });
+            </div>
+        </div>
+        
+        <div class="info">
+            <h3>Status:</h3>
+            <p id="status">Carregando biblioteca...</p>
+        </div>
+    </div>
+
+    <script>
+        // Demo do player
+        setTimeout(() => {
+            const statusEl = document.getElementById('status');
+            
+            if (window.VTurbPlayer) {
+                statusEl.textContent = '✅ Biblioteca carregada com sucesso!';
+                statusEl.style.color = 'green';
+                
+                // Demo do player
+                const player = window.VTurbPlayer.init('demo123', {
+                    apiUrl: 'http://localhost:3001',
+                    primaryColor: '#3B82F6',
+                    autoplay: false,
+                    muted: true
+                });
+                
+            } else {
+                statusEl.textContent = '❌ Erro ao carregar biblioteca';
+                statusEl.style.color = 'red';
+            }
+        }, 1000);
+    </script>
+</body>
+</html> 

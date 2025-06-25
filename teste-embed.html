@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste VTurb Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8fafc;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .info {
+            background: #e0f2fe;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #0284c7;
+        }
+        .code {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Teste do VTurb Player</h1>
+        
+        <div class="info">
+            <h3>ℹ️ Como funciona:</h3>
+            <p>O script abaixo vai criar automaticamente um player de vídeo nesta página.</p>
+            <p><strong>Script usado:</strong></p>
+            <div class="code">
+                &lt;script src="http://localhost:3001/embed/5a5149ec-3e74-41e2-9136-32cfec7e1840.js"&gt;&lt;/script&gt;
+            </div>
+        </div>
+
+        <h2>📺 Player aparecerá aqui:</h2>
+        
+        <!-- O script embed vai inserir o player aqui -->
+        <script src="http://localhost:3001/embed/5a5149ec-3e74-41e2-9136-32cfec7e1840.js"></script>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f3f4f6; border-radius: 8px;">
+            <h3>🔍 O que acontece:</h3>
+            <ol>
+                <li>O navegador baixa o script da API</li>
+                <li>O script cria um container para o vídeo</li>
+                <li>O player é inserido automaticamente</li>
+                <li>Analytics são coletados (impressão, play, etc.)</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html> 
